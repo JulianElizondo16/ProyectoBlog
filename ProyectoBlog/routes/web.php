@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ComentariosController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,9 +14,29 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::controller(ComentariosController::class)->group(function(){
+
+    Route::get('/', 'index')->name('comentarios.home');
+    
+    Route::post('/comentarios', 'GenerarComentario')->name('comentarios.generar');
+    
+    //muestra el Comentario a detalle
+    Route::get('/comentarios/{comentario}', 'show')->name('comentarios.show');
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 Route::middleware([
     'auth:sanctum',
