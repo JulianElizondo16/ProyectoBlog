@@ -1,7 +1,7 @@
 {
     "name": "julia/proyecto-blog",
-    "type": "library",
-    "license": "MIT",
+    "type": "project",
+    "license": "mit",
     "autoload": {
         "psr-4": {
             "Julia\\ProyectoBlog\\": "src/"
