@@ -1,6 +1,6 @@
 {
     "name": "julia/proyecto-blog",
-    "type": "project",
+    "type": "library",
     "license": "mit",
     "autoload": {
         "psr-4": {
